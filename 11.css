@@ -1,0 +1,99 @@
+/* Section and container */
+#service {
+  background-color: #f9f9f9;
+  padding: 4rem 0;
+}
+
+.main {
+  width: 100%;  /* Set to full width */
+  margin: 0 auto;  /* Center align if any margins needed */
+}
+
+/* Title styles */
+.title-wrap {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sm-title {
+  display: inline;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.lg-title {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Services row */
+.servic-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Services item */
+.servic-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 calc(33.333% - 2rem);
+  box-sizing: border-box;
+  transition: transform 0.3s;
+}
+
+.servic-item:hover {
+  transform: translateY(-10px);
+}
+
+/* Services icon */
+.servic-icon {
+  font-size: 2.5rem;
+  color: #ff6600;
+  margin-bottom: 1rem;
+}
+
+.servic-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.servic-item p.text {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+.servic-item .btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.servic-item .btn:hover {
+  background-color: #e05500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .servic-item {
+      flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .servic-item {
+      flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extended Form Validation Example</title>
+    <style>
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <form id="myForm" action="#" method="post" onsubmit="return validateForm()">
+        <!-- Name Field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Phone Number Field -->
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone"><br><br>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <!-- Confirm Password Field -->
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+        <!-- Age Field -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" max="120"><br><br>
+
+        <!-- Gender Field -->
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+        <p id="error-message" class="error"></p>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Get the form elements
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const age = document.getElementById('age').value;
+            const gender = document.getElementById('gender').value;
+            const errorMessage = document.getElementById('error-message');
+
+            // Regular expressions for validation
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            const phonePattern = /^\d{10}$/; // Example: 10-digit phone number
+
+            // Clear previous error messages
+            errorMessage.textContent = '';
+
+            // Validation logic
+            if (name === '') {
+                errorMessage.textContent = 'Name is required.';
+                return false;
+            }
+
+            if (email === '') {
+                errorMessage.textContent = 'Email is required.';
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                errorMessage.textContent = 'Please enter a valid email address.';
+                return false;
+            }
+
+            if (phone === '') {
+                errorMessage.textContent = 'Phone number is required.';
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                errorMessage.textContent = 'Please enter a valid 10-digit phone number.';
+                return false;
+            }
+
+            if (password === '') {
+                errorMessage.textContent = 'Password is required.';
+                return false;
+            }
+
+            if (password.length < 8) {
+                errorMessage.textContent = 'Password must be at least 8 characters long.';
+                return false;
+            }
+
+            if (confirmPassword === '') {
+                errorMessage.textContent = 'Please confirm your password.';
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match.';
+                return false;
+            }
+
+            if (age === '') {
+                errorMessage.textContent = 'Age is required.';
+                return false;
+            }
+
+            if (isNaN(age) || age < 1 || age > 120) {
+                errorMessage.textContent = 'Please enter a valid age between 1 and 120.';
+                return false;
+            }
+
+            if (gender === '') {
+                errorMessage.textContent = 'Please select your gender.';
+                return false;
+            }
+
+            // If all validations pass
+            return true;
+        }
+    </script>
+</body>
+</html>

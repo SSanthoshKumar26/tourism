@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+
+
+h1{
+    font-size: 200px;
+    background: url(q2);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

@@ -1,0 +1,79 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AOS Card Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="scroll-element" data-aos="fade-up">
+          <div class="image-container">
+            <img src="i1" alt="Image 1">
+          </div>
+          <div class="text-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+          </div>
+        </div>
+        <div class="scroll-element" data-aos="fade-up">
+          <div class="image-container">
+            <img src="i2" alt="Image 2">
+          </div>
+          <div class="text-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+          </div>
+        </div>
+        <div class="scroll-element" data-aos="fade-up">
+          <div class="image-container">
+            <img src="i3" alt="Image 3">
+          </div>
+          <div class="text-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+          </div>
+        </div>
+        <div class="scroll-element" data-aos="fade-up">
+          <div class="image-container">
+            <img src="image4.jpg" alt="Image 4">
+          </div>
+          <div class="text-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+          </div>
+        </div>
+      </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="ne.js"></script>
+  <style>
+    /* styles.css */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 18px;
+  color: #666;
+}
+
+  </style>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@keyframes dancingCard {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .container {
+    background-color: #f8f9fa; /* Light background color */
+    background-image: url('path/to/your/light-background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 100px;
+    width: 100%; /* Full width for desktop size */
+    padding-top: 50px;
+  }
+
+  .title-wrap .lg-title {
+    color: #23272b;
+    position: relative;
+    top: 130px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .col-lg-4,
+  .col-md-6,
+  .mb-4 {
+    flex: 0 0 30%; /* Adjusted width for 3 columns with gap */
+    margin-bottom: 20px;
+  }
+
+  .feature-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    animation: dancingCard 2s infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visibility */
+    margin: 10px; /* Gap between cards */
+  }
+
+  .feature-item img {
+    width: 100%;
+    height: auto;
+  }

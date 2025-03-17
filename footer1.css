@@ -1,0 +1,100 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.footer {
+    background: #343a40;
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer .container .row > div {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.footer .site-brand span {
+    color: #ffc107;
+}
+
+.footer h2 {
+    color: #ffc107;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer h2::after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: #ffc107;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.footer p,
+.footer a {
+    color: #adb5bd;
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.footer .list-unstyled li:hover {
+    transform: translateX(10px);
+}
+
+.footer .subscribe-form .form-control {
+    border-radius: 30px 0 0 30px;
+}
+
+.footer .subscribe-form .btn {
+    border-radius: 0 30px 30px 0;
+}
+
+.footer .social-icons a {
+    color: #adb5bd;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #ffc107;
+}
+
+.footer .contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 50px;
+    }
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Journey Hive</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+    <style>
+        .small-dropdown {
+            width: 200px;
+        }
+
+        .large-dropdown {
+            width: 300px;
+            height: 300px;
+            overflow-y: auto;
+        }
+
+        .navbar-custom {
+            background-color: darkslategray;
+            transition: background-color 0.5s ease;
+        }
+
+        .carousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item img {
+            height: 100vh;
+        }
+
+        .carousel-item {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .carousel-caption {
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+
+        .banner {
+            margin-bottom: 200px;
+            top: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .form {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .full-background {
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .carousel-item {
+            transition: transform 1s ease, opacity 1s ease;
+        }
+
+        .carousel-item-next,
+        .carousel-item-prev,
+        .carousel-item.active {
+            transform: scale(1.05);
+        }
+
+        .form input[type="text"],
+        .form input[type="date"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form .book {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form .book:hover {
+            background-color: #ffcc00;
+        }
+
+        .styled-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .styled-button::before {
+            content: "";
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .styled-button:hover::before {
+            transform: translate(-50%, -50%) scale(2);
+        }
+
+        .styled-button a {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: color 0.3s ease;
+        }
+
+        .styled-button:hover a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .hotels-container {
+            display: none;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel {
+            padding: 20px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hotel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .hotel h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .hotel p {
+            font-size: 1em;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: 20px;">
+                <span style="font-size: 40px;">Journey</span><span style="color:#ffd700;font-size: 40px;">Hive</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 70px;">
+                <ul class="navbar-nav ms-auto" style="margin-left: 200px;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#place1">Tours/Packages</a>
+                    </li>
+                    <nav class="nav">
+                        <div class="nav-item dropdown" style="margin-left: 5px;">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Contact us
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                <li><a class="dropdown-item" href="#">ContactNo: +1 (123) 456-7890</a></li>
+                                <li><a class="dropdown-item" href="#">Email: contact@journeyhive.com</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <nav class="nav">
+                        <div class="nav-item dropdown" style="margin-left: 5px;">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Branches
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                <li><a class="dropdown-item" href="#">Mumbai</a></li>
+                                <li><a class="dropdown-item" href="#">Chennai</a></li>
+                                <li><a class="dropdown-item" href="#">Delhi</a></li>
+                                <li><a class="dropdown-item" href="#">Banglore</a></li>
+
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <li class="nav-item" style="margin-left: 130px;">
+                        <button class="styled-button btn btn-primary ms-3">
+                            <a href="login.html" class="text-white">Login/Sign up</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXlRbY6tN2Qro7g6YFQ2dY2LN9ornz0pg0xR36aaBwrhXTl8HjIB8J8aOOHu" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhG81uVr1p4eT5Y2ecOqsqxFemVHNCTMW5yPZSmFZp4U5pL4pHpLMM3C9dgi" crossorigin="anonymous">
+    </script>
+
+
+    <div class="container mt-5 pt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center">Plan Your Trip with Journey Hive</h1>
+                <form id="bookingForm" class="form mt-4">
+                    <div class="form-group">
+                        <label for="destination">Travel Destination:</label>
+                        <input type="text" class="form-control" id="destination" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="travelDate">Travel Date:</label>
+                        <input type="date" class="form-control" id="travelDate" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4 book">Book</button>
+                </form>
+            </div>
+        </div>
+        <div id="hotelsContainer" class="hotels-container mt-5">
+            <h2>Top Budget Hotels</h2>
+            <div id="hotelsList" class="row"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const destination = document.getElementById('destination').value;
+            const travelDate = document.getElementById('travelDate').value;
+
+            // Mockup data for hotels
+            const hotels = [
+                {
+                    name: 'Budget Inn London',
+                    image: 'https://via.placeholder.com/150',
+                    description: 'Affordable and comfortable stay in the heart of London.'
+                },
+                {
+                    name: 'Economy Hotel London',
+                    image: 'https://via.placeholder.com/150',
+                    description: 'Convenient location with all the necessary amenities.'
+                },
+                {
+                    name: 'Budget Stay London',
+                    image: 'https://via.placeholder.com/150',
+                    description: 'Perfect for travelers looking for great value.'
+                }
+            ];
+
+            // Clear previous hotel listings
+            const hotelsList = document.getElementById('hotelsList');
+            hotelsList.innerHTML = '';
+
+            // Populate hotel listings
+            hotels.forEach(hotel => {
+                const hotelCard = document.createElement('div');
+                hotelCard.className = 'col-md-4 hotel';
+
+                hotelCard.innerHTML = `
+                    <img src="${hotel.image}" alt="${hotel.name}">
+                    <h3>${hotel.name}</h3>
+                    <p>${hotel.description}</p>
+                `;
+
+                hotelsList.appendChild(hotelCard);
+            });
+
+            // Show the hotels container
+            document.getElementById('hotelsContainer').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

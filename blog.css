@@ -1,0 +1,125 @@
+/* Section and container */
+#blog {
+    background-color: #f0f0f0;
+    padding: 4rem 0;
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Title styles */
+.title-wrap {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sm-title {
+    display: block;
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.lg-title {
+    font-size: 2.5rem;
+    color: #444;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+.lg-title:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #ff6600;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Blog row */
+.blog-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Blog item */
+.blog-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.blog-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.blog-item:hover .blog-img img {
+    transform: scale(1.05);
+}
+
+/* Blog content */
+.blog-content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-content h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.blog-content p.text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Button */
+.blog-content .btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: #ff6600;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.blog-content .btn:hover {
+    background-color: #e05500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .blog-item {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-item {
+        flex: 1 1 100%;
+    }
+}

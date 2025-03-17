@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hotspot Example</title>
+</head>
+<body>
+    <h2>Clickable Image Map Hotspots</h2>
+    <img src="i1" alt="Example Image" usemap="#image-map">
+
+    <map name="image-map">
+        <area shape="rect" coords="34,44,270,350" href="#section1" alt="Section 1">
+        <area shape="circle" coords="337,300,44" href="#section2" alt="Section 2">
+        <area shape="poly" coords="30,50,70,200,100,50" href="#section3" alt="Section 3">
+    </map>
+
+    <section id="section1">
+        <h3>Section 1</h3>
+        <p>Details about Section 1.</p>
+    </section>
+
+    <section id="section2">
+        <h3>Section 2</h3>
+        <p>Details about Section 2.</p>
+    </section>
+
+    <section id="section3">
+        <h3>Section 3</h3>
+        <p>Details about Section 3.</p>
+    </section>
+</body>
+
+
+
+</html>

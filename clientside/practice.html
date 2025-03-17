@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Journey Hive</title>
+    <link rel="stylesheet" href="practice.css">
+    <link rel="stylesheet" href="11.css">
+    <link rel="stylesheet" href="practice1.css">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+<style >
+    .small-dropdown {
+        width: 200px;
+    }
+
+    .large-dropdown {
+        width: 300px;
+        height: 300px;
+        overflow-y: auto;
+    }
+
+    .book {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .book:hover {
+        background-color: #ffcc00;
+        /* Slightly darker shade of yellow */
+        transform: scale(1.05);
+        /* Slightly increase the size */
+    }
+</style>
+
+<body style="background-color: #f5f5f5;  color: #333">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top" style="background-color:#2c2c2c;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-size: 20px;">
+                <h2 class="text-uppercase mb-4" style="font-size: 2.5rem; font-family: 'Georgia', serif; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);text-align: center;margin-top: 4px;;">
+                    Journey<span  style="color: #ffd300; font-family: 'Georgia', serif;">Hive</span>
+                </h2>
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 70px;">
+                <ul class="navbar-nav ms-auto" style="margin-left: 200px;color: black;">
+                    <li class="nav-item" style="color: #23272b;">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item"  style="color: #23272b">
+                        <a class="nav-link" href="#place1">Tours/Packages</a>
+                    </li>
+                    <nav class="nav"  style="color: #23272b">
+                        <div class="nav-item dropdown" style="margin-left: 5px;">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Contact us
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                <li><a class="dropdown-item" href="#">ContactNo: +1 (123) 456-7890</a></li>
+                                <li><a class="dropdown-item" href="#">Email: contact@journeyhive.com</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <nav class="nav"  style="color: #23272b">
+                        <div class="nav-item dropdown" style="margin-left: 5px;">
+                            <a class="nav-link dropdown-toggle" href="#" id="aboutUsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Branches
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                <li><a class="dropdown-item" href="#">Mumbai</a></li>
+                                <li><a class="dropdown-item" href="#">Chennai</a></li>
+                                <li><a class="dropdown-item" href="#">Delhi</a></li>
+                                <li><a class="dropdown-item" href="#">Banglore</a></li>
+
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <li class="nav-item" style="margin-left: 130px;">
+                        <button class="styled-button btn btn-primary ms-3">
+                            <a href="login.html" class="text-white">Login/Sign up</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+
+
+
+
+    <!-- Carousel -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="e1" class="d-block w-100" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="img2" class="d-block w-100" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="img3.jpg" class="d-block w-100" alt="Image 3">
+          </div>
+          <div class="carousel-item">
+            <img src="img5" class="d-block w-100" alt="Image 5">
+          </div>
+          <div class="carousel-item">
+            <img src="img6" class="d-block w-100" alt="Image 6">
+          </div>
+        </div>
+      </div>
+
+    <div class="banner" style="padding: 50px; text-align: center;">
+        <div class="banner-text-item" style="color: black;">
+            <div class="animated-text"></div>
+            <div class="Section_top">
+                <div class="content"></div>
+            </div>
+            <form class="form" id="travelForm" style="margin-top: 20px;">
+                <input type="text" list="mylist" id="destination" placeholder="Where would you like to go?"
+                    style="padding: 15px 50px; margin-bottom: 15px; width: 80%;">
+                <datalist id="mylist">
+                    <option>London</option>
+                    <option>Canada</option>
+                    <option>Monaco</option>
+                    <option>France</option>
+                    <option>Japan</option>
+                    <option>Switzerland</option>
+                    <option>Seoul</option>
+                    <option>England</option>
+                    <option>Thailand</option>
+                </datalist>
+                <div id="destinationWarning" style="color: red; margin-top: 10px; min-height: 20px; display: none;">
+                    Please select a destination.</div>
+                <input type="date" id="travelDate" placeholder="Travel date"
+                    style="padding: 15px 50px; margin-bottom: 15px; width: 80%;">
+                <div id="dateWarning" style="color: red; margin-top: 10px; min-height: 20px; display: none;">Please
+                    select a travel date.</div>
+                <button type="button" class="book" onclick="submitForm()"
+                    style="display: inline-block; padding: 15px 50px; background-color: #ffd700; color: black; text-decoration: none; margin-top: 15px;">Book</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+    function submitForm() {
+        var destination = document.getElementById('destination').value;
+        var travelDate = document.getElementById('travelDate').value;
+        var destinationWarning = document.getElementById('destinationWarning');
+        var dateWarning = document.getElementById('dateWarning');
+
+        var isFormValid = true;
+
+        if (destination === "") {
+            destinationWarning.style.display = 'block';
+            isFormValid = false;
+        } else {
+            destinationWarning.style.display = 'none';
+        }
+
+        if (travelDate === "") {
+            dateWarning.style.display = 'block';
+            isFormValid = false;
+        } else {
+            dateWarning.style.display = 'none';
+        }
+
+        if (isFormValid) {
+            window.location.href = 'config.html?destination=' + encodeURIComponent(destination) + '&travelDate=' + encodeURIComponent(travelDate);
+        } else {
+            alert("Please fill in all required fields.");
+        }
+    }
+</script>
+
+    </script>
+
+    <style>
+
+       
+        .navbar-custom {
+            background-color: #333333;
+            transition: background-color 0.5s ease;
+
+        }
+
+        .carousel,
+        .carousel-inner,
+        .carousel-item,
+        .carousel-item img {
+            height: 100vh;
+        }
+
+        .carousel-item {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+
+        .carousel-caption {
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+
+        .banner {
+            margin-bottom: 200px;
+            top: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .form {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .full-background {
+            background-color: #333;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .carousel-item {
+            transition: transform 2s ease, opacity 1s ease;
+        }
+
+        .carousel-item-next,
+        .carousel-item-prev,
+        .carousel-item.active {
+            transform: scale(1.05);
+        }
+
+        .form input[type="text"],
+        .form input[type="date"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form .book {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ffd700;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .form .book:hover {
+            background-color: #ffcc00;
+        }
+
+        .styled-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .styled-button::before {
+            content: "";
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        .styled-button:hover::before {
+            transform: translate(-50%, -50%) scale(2);
+        }
+
+        .styled-button a {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: color 0.3s ease;
+        }
+
+        .styled-button:hover a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+    </style>
+
+
+
+
+
+    <!--------Welcome Page------------->
+    <div class="new" style="margin: 50px; margin-top:120px;margin-bottom:120px;background-color: #ffc107;color:black;font-size: 18px;padding: 50px;">
+        <div class="container">
+
+            <h1 class="animated-text">"Welcome to experience unforgettable travel adventures!"</h1>
+               
+        </div>
+        <p class="centered-paragraph">
+            <i>Journey Hive is a dynamic travel platform designed to inspire and guide modern explorers. At its
+                core, Journey Hive offers a seamless experience, merging stunning visuals with comprehensive
+                travel information. Users can delve into detailed destination guides, discover hidden gems, and
+                access tailored itineraries that suit various interests and budgets. The platform boasts an
+                intuitive interface, making it easy to book flights, accommodations, and local experiences all
+                in one place. Journey Hive also fosters a vibrant community where travelers can share stories,
+                tips, and reviews, creating a hive of shared knowledge and inspiration. Whether planning a solo
+                adventure, a family vacation, or a romantic getaway, Journey Hive is the ultimate companion for
+                those seeking memorable and enriching travel experiences. Its commitment to sustainable tourism
+                and cultural immersion ensures that every journey contributes positively to the destinations and
+                communities visited.</i>
+        </p>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="car-container">
+        <div class="background-text">Journey Hive</div>
+        <div class="car">
+            <img src="q11" alt="Image 1">
+            <div class="car-content">
+                <p>"Your Travel Companion<br>Unleash unforgettable experiences with us".</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="q13" alt="Image 2">
+            <div class="car-content">
+                <p>"From hidden gems to popular hotspots,<br>Journey Hive helps you create the perfect itinerary."</p>
+            </div>
+        </div>
+        <div class="car">
+            <img src="q14" alt="Image 3">
+            <div class="car-content">
+                <p>"Journey Hive offers futuristic family trips,<br>fun and bonding for an out-of-this-world
+                    experience."</p>
+            </div>
+        </div>
+    </div>
+    <!--<section id="servic" class="py-4"
+        style="margin: 50px;background-color: #343a40; background-size: cover;position: relative;height: 50rem;margin: 0;z-index: 3;margin-bottom: 50px;height: 40rem;">
+        <div class="title-wrap">
+            <span class="sm-title" style="color: white;margin-top: 50px;">know about services that we offer</span>
+            <h3 class="lg-title" style="color: white;margin-top: 40px;font-size: 70px;">Our services</h3>
+        </div>
+
+        <div class="servic-row"
+            style="position: relative;right: 10px;margin-top: 9rem;z-index: 4;height: 290px;width: 290px;justify-content: space-between;">
+            <div class="servic-item"
+                style="border: 5px solid orange;position: relative;bottom: 100px;left: 60px;width: 400px;height: 400px;">
+
+                <img src="ho" alt="image" />
+                <h3>Luxurious Hotel</h3>
+                <p class="text">Experience the epitome of comfort and elegance at our 5-star hotels.</p>
+
+            </div>
+
+            <div class="servic-item"
+                style="border: 5px solid orange;position: relative;bottom: 590px;left: 580px;width: 400px;height: 400px;margin-top: 50px;">
+
+                <img src="ho1" alt="image" />
+                <h3>Travel Guide</h3>
+                <p class="text">Discover hidden gems and popular attractions with our expert travel guides</p>
+
+            </div>
+
+            <div class="servic-item"
+                style="border: 5px solid orange;position: relative;bottom: 1139px;left: 1100px;width: 400px;height: 400px;margin-top: 115px;">
+
+                <img src="ho2" alt="image" />:
+                <h3>Suitable Price</h3>
+                <p class="text" style="margin-top: 6px;margin-bottom: 3px;">Enjoy competitive pricing </p>
+
+            </div>
+        </div>
+        </div>
+    </section> -->
+    <style>
+        #servic {
+            background-color: #343a40;
+            /* Gray background color */
+            padding: 40px 0;
+            /* Reduced padding for the section */
+            margin: 0;
+            color: white;
+        }
+
+        .title-wrap {
+            text-align: center;
+            margin-bottom: 30px;
+            /* Reduced margin for better spacing */
+        }
+
+        .title-wrap .sm-title {
+            display: block;
+            font-size: 1.2rem;
+            /* Adjusted font size */
+        }
+
+        .title-wrap .lg-title {
+            font-size: 2.5rem;
+            /* Adjusted font size */
+        }
+
+        .feature-item {
+            border: 5px solid orange;
+            height: 300px;
+            /* Adjusted height */
+            padding: 15px;
+            box-sizing: border-box;
+            background-color: white;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .feature-item img {
+            width: 100%;
+            height: auto;
+            max-height: 150px;
+            /* Adjusted height for the image */
+            object-fit: cover;
+            margin-bottom: 15px;
+            /* Adjusted margin */
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-item h3 {
+            color: darkorange;
+            margin-bottom: 10px;
+            /* Adjusted margin */
+        }
+
+        .feature-item p {
+            color: black;
+        }
+    </style>
+
+    <!--<div class="container" style="background-image:url();padding-bottom: 100px;" >
+  <div class="title-wrap">
+   
+    <h3 class="lg-title" style="color: #23272b;position: relative;top:130px;"> Know about our unique offerings</h3>
+  </div>
+  <div class="row ">
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="feature-item">
+        <img src="ho" alt="Luxurious Hotel">
+        <h3>Luxurious Hotel</h3>
+        <p>Experience the epitome of comfort and elegance at our 5-star hotels.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="feature-item">
+        <img src="ho1" alt="Travel Guide">
+        <h3>Travel Guide</h3>
+        <p>Discover hidden gems and popular attractions with our expert travel guides.</p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="feature-item">
+        <img src="ho2" alt="Suitable Price">
+        <h3>Suitable Price</h3>
+        <p>Enjoy competitive pricing.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    </style>
+
+    <div class="custom-container">
+        <div class="custom-title-wrap">
+            <!----   <h3 style="color:black;position: relative;font-size: 27px;text-align: center;bottom: 50px;">"Your Gateway to Luxury Stays and Expert Travel Guides at Unbeatable Prices"</h3> -->
+            <h3 style="color:#23272b;position: relative;font-size: 27px;text-align: center;bottom: 50px;
+    animation: LuxuryReveal 2s ease-out;">
+                "Your Gateway to Luxury Stays and Expert Travel Guides at Unbeatable Prices"
+            </h3>
+
+            <style>
+                @keyframes LuxuryReveal {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(30px) scale(0.9) rotate(-5deg);
+                    }
+
+                    60% {
+                        opacity: 1;
+                        transform: translateY(-10px) scale(1.05) rotate(3deg);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0) scale(1) rotate(0deg);
+                    }
+                }
+            </style>
+
+            <!----
+    <div class="custom-row">
+      <div class="custom-col-lg-4 custom-col-md-6 custom-mb-4">
+        <div class="custom-feature-item">
+          <h3>Luxurious Hotel</h3>
+          <img src="ho" alt="Luxurious Hotel">
+          <p>Experience the epitome of comfort and elegance at our 5-star hotels.</p>
+        </div>
+      </div>
+      <div class="custom-col-lg-4 custom-col-md-6 custom-mb-4">
+        <div class="custom-feature-item">
+          <h3>Travel Guide</h3>
+          <img src="ho1" alt="Travel Guide">
+          <p>Discover hidden gems and popular attractions with our expert travel guides.</p>
+        </div>
+      </div>
+      <div class="custom-col-lg-4 custom-col-md-6 custom-mb-4">
+        <div class="custom-feature-item">
+          <h3>Suitable Price</h3>
+          <img src="ho2" alt="Suitable Price">
+          <p>Enjoy competitive pricing.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+            <style>
+               
+                .car-container {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 100px;
+                    margin-bottom: 200px;
+                    margin-top: 200px;
+                }
+
+                .background {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    background-color: #3498db;
+                    /* added background color */
+                    z-index: -1;
+                }
+
+                .background-text {
+                    position: absolute;
+                    font-size: 14rem;
+                    color: rgba(0, 0, 0, 0.1);
+                    z-index: -1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    animation: fade-in 2s;
+                    /* added animation */
+                }
+
+                .car {
+                    position: relative;
+                    width: 300px;
+                    background-color: #ffd700;
+                    margin: 0 10px;
+                    transition: transform 0.5s, box-shadow 0.5s;
+                    transform-style: preserve-3d;
+                    box-shadow: 0 10px 20px #192841;
+                    animation: slide-in 2s;
+                    /* added animation */
+                    transform: perspective(1000px) rotateY(10deg);
+                    /* added tilt effect */
+                }
+
+                .car img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+
+                .car-content {
+                    padding: 10px;
+                    background-color: #ffd700;
+                    color: white;
+                    text-align: center;
+                    transform: translateZ(20px);
+                }
+
+                .car p {
+                    color: #192841;
+                }
+
+                .car:hover {
+                    transform: perspective(1000px) rotateY(10deg) translateY(-20px) scale(1.05);
+                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                }
+
+                /* added animations */
+                @keyframes fade-in {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes slide-in {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+            </style>
+
+            <div class="container"  >
+                <div class="row">
+                    <!-- Card 1: Fade in from Left, aligned to the left end -->
+                    <div class="col-md-8 mb-4">
+                        <div class="card custom-sect d-flex align-items-center" data-aos="fade-left" 
+                            style="background-color: #192841; height: 300px; position: relative;right: 370px; border-radius: 20px;">
+                            <div class="card-body text-light" style="flex: 1; font-size: 1rem; padding-right: 20px;">
+                                <p style="margin: 0; position: relative; top: 80px; right: 9rem; font-size: 20px;color:white;">"Travel the world affordably!<br> Enjoy easy bookings for<br> budget hotels, ensuring comfort and<br> savings on your journey."</p>
+                            </div>
+                            <img src="imag" alt="Image 1" class="img-fluid" 
+                                style="width: 250px; height: 250px; object-fit: cover; margin-left: 100px; position: relative; bottom: 5px; left: 150px;">
+                        </div>
+                    </div>
+            
+                    <!-- Card 2: Fade in from Right, aligned to the left end -->
+                    <div class="col-md-8 mb-4">
+                        <div class="card custom-sect d-flex align-items-center" data-aos="fade-right" 
+                            style="background-color: #192841; height: 300px;position: relative;left: 380px; border-radius: 20px">
+                            <div class="card-body text-light" style="flex: 1; font-size: 1rem; padding-right: 20px;">
+                                <p style="margin: 0; position: relative; top: 80px; right: 9rem; font-size: 18px;color: white;">"Flying on a specific date?<br> We've got you covered. Book flights tailored to your <br>schedule  for a hassle-free experience."</p>
+                            </div>
+                            <img src="imag1" alt="Image 2" class="img-fluid" 
+                                style="width: 250px; height: 250px; object-fit: cover; margin-left: 100px; position: relative; bottom: 5px; left: 150px;">
+                        </div>
+                    </div>
+            
+                    <!-- Card 3: Fade in from Top, aligned to the left end -->
+                    <div class="col-md-8 mb-4">
+                        <div class="card custom-sect d-flex align-items-center" data-aos="fade-down" 
+                            style="background-color :#192841; height: 300px;position: relative;right: 370px;border-radius: 20px">
+                            <div class="card-body text-light" style="flex: 1; font-size: 1rem; padding-right: 20px;">
+                                <p style="margin: 0; position: relative; top: 80px; right: 9rem; font-size: 20px;color: white;">"We craft personalized trips that fit your budget, <br>so you can enjoy your dream vacation without<br> overspending."</p>
+                            </div>
+                            <img src="bud" alt="Image 3" class="img-fluid" 
+                                style="width: 250px; height: 250px; object-fit: cover; margin-left: 100px; position: relative; bottom: 5px; left: 150px;">
+                        </div>
+                    </div>
+            
+                    <!-- Card 4: Fade in from Bottom, aligned to the left end -->
+                    <div class="col-md-8 mb-4">
+                        <div class="card custom-sect d-flex align-items-center" data-aos="fade-up" 
+                            style="background-color:#192841; height: 300px;position: relative;left: 380px;border-radius: 20px">
+                            <div class="card-body text-light" style="flex: 1; font-size: 1rem; padding-right: 20px;">
+                                <p style="margin: 0; position: relative; top: 80px; right: 9rem; font-size: 20px;color: white;">"Get tailored travel guides that match your <br>interests, ensuring you make<br> the most of your journey."</p>
+                            </div>
+                            <img src="gui" alt="Image 4" class="img-fluid" 
+                                style="width: 250px; height: 250px; object-fit: cover; margin-left: 100px; position: relative; bottom: 5px; left: 150px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- AOS Library JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+            
+            <script>
+                AOS.init({
+                    duration: 1000, // Animation duration in milliseconds
+                    easing: 'ease-in-out', // Easing function for animation
+                    once: false, // Animation happens every time you scroll back up
+                    mirror: true, // Whether elements should animate out while scrolling past them
+                });
+            </script>
+
+
+
+
+
+
+
+            <!--=========Services===============-->
+            <h1 style="text-align: center; color: black;position: relative;top:39rem">Why Choose Us?</h1>
+            <section class="services" style="margin-bottom: 200px;position: relative;top: 40rem;">
+
+                <div class="service-item"  >
+                    <img src="p">
+                    <h2>8000+ Local Guides</h2>
+                    <p>Explore with our 8000+ local guides who bring authentic experiences to every journey.</p>
+                </div>
+                <div class="service-item">
+                    <img src="p2">
+                    <h2>100% Trusted Agency</h2>
+                    <p>Travel confidently with a 100% trusted agency known for reliability and customer satisfaction.</p>
+                </div>
+                <div class="service-item">
+                    <img src="p3">
+                    <h2>28+ Years of Experience</h2>
+                    <p>Leverage our 28+ years of experience to create unforgettable journeys tailored for you.</p>
+                </div>
+                <div class="service-item">
+                    <img src="p4">
+                    <h2>98% Happy Travelers</h2>
+                    <p>Join the 98% of happy travelers who love our services and unforgettable experiences.</p>
+                </div>
+            
+            </section>
+            
+            </section>
+
+
+            <!--==============Places===================--
+            <div class="container" style="margin-top: 800px;background-color: #ffd700;">
+                <h2 class="gallery-title">Explore Our Hotel Options: Budget-Friendly Stays Just for You</h2>
+                <div class="gallery-container">
+                    <div class="gallery-item" >
+                        <img src="syd" alt="Person " style="width: 500px;height: 500px;">
+                        <div class="text-overlay">Sydney</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="india ht" alt="Sunset" style="width: 500px;height: 500px;">
+                        <div class="text-overlay">Mumbai</div>
+                    </div>
+                    <div class="gallery-item" style="width: 500px;height: 500px;">
+                        <img src="dubai.jpg" alt="People holding  Japan">
+                        <div class="text-overlay">Dubai</div>
+                    </div>
+                    <div class="gallery-item"style="width: 500px;height: 500px;">
+                        <img src="monaco.jpg" alt="Image 4">
+                        <div class="text-overlay">Monacco/div>
+                    </div>
+                    <div class="gallery-item" style="width: 500px;height: 500px;">
+                        <img src="japan.webp" alt="Image 5">
+                        <div class="text-overlay">Japan</div>
+                    </div>
+                    <div class="gallery-item"style="width: 500px;height: 500px;">
+                        <img src="New delhi.jpg" alt="Image 6">
+                        <div class="text-overlay">New Delhi</div>
+                    </div>
+                </div>
+            </div>
+           
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>--
+        <style>
+        
+       
+    .gallery-container {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-behavior: smooth; /* Smooth scrolling */
+        width: 100%;
+        height: 30rem;
+        padding: 0px;
+       ; /* Remove padding to ensure full width */
+        box-sizing: border-box; /* Include padding in the width */
+        background-color: #ffd700; /* Background color of the container */
+    }
+
+    .gallery-item {
+        flex: 0 0 auto;
+        position: relative;
+        margin-right: 10px; /* Space between images */
+        width: 300px; /* Fixed width for each item */
+        height: 400px; /* Fixed height for each item */
+        background: #192841; /* Background color of gallery items */
+        color: white; /* Text color */
+        border-radius: 10px; /* Rounded corners for items */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    }
+
+    .gallery-item img {
+        width: 100%; /* Make image fill the container */
+        height: 100%; /* Make image fill the container */
+        object-fit: cover; /* Ensure images cover the area while maintaining aspect ratio */
+        border-radius: 10px; /* Rounded corners for images */
+        transition: transform 0.3s ease-in-out; /* Animation for zoom effect */
+    }
+
+    .gallery-item img:hover {
+        transform: scale(1.1); /* Zoom in on hover */
+    }
+
+    .text-overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .gallery-title {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .gallery-item p {
+        margin: 20px 0 0;
+        padding: 0 10px;
+    }
+</style>
+
+     
+   
+    <div class="container" style="margin-top: 800px;background-color: #ffd700;width: 120rem;">
+        <h2 class="gallery-title">Explore Our Hotel Options: Budget-Friendly Stays Just for You</h2>
+        <div class="gallery-container">
+            <div class="gallery-item" style="background: #192841;color: white;">
+                <img src="syd" alt="Sydney">
+                <div class="text-overlay">Sydney</div>
+                <p style="margin-top: 20px;">
+                    Sydney is a stunning coastal city, and <br>Journey Hive can book you a budget-friendly<br> hotel for your stay.</p>
+            </div>
+            <div class="gallery-item" style="background: #192841;color: white;">
+                <img src="india ht" alt="Mumbai">
+                <div class="text-overlay">Mumbai</div>
+                <p>
+                    Mumbai is a vibrant financial hub, and Journey Hive can book you a budget-friendly hotel there</p>
+            </div>
+            <div class="gallery-item" style="background: #192841;color: white;">
+                <img src="dubai.jpg" alt="Dubai">
+                <div class="text-overlay">Dubai</div>
+                <p>
+                    Dubai is a dazzling city of luxury, and Journey Hive can book you a budget-friendly hotel there.
+                </p>
+
+            </div>
+            <div class="gallery-item"style="background: #192841;color: white;">
+                <img src="monaco.jpg" alt="Monaco">
+                <div class="text-overlay">Monaco</div>
+                <p>
+                    Monaco is a glamorous hotspot, and Journey Hive can book you a budget-friendly hotel there.
+                </p>
+            </div>
+            <div class="gallery-item" style="background: #192841;color: white;">
+                <img src="japan.webp" alt="Japan">
+                <div class="text-overlay">Japan</div>
+                <p>
+                    Japan offers a unique blend of tradition and modernity, and Journey Hive can secure a budget-friendly hotel for you.
+                </p>
+            </div>
+            <div class="gallery-item"style="background: #192841;color: white;">
+                <img src="New delhi.jpg" alt="New Delhi">
+                <div class="text-overlay">New Delhi</div>
+                <p>New Delhi is a city rich in history and culture, and Journey Hive can find you a budget-friendly hotel there.</p>
+            </div>
+        </div>
+    </div>-->
+   
+    <style>
+        .layout-wrapper {
+            display: flex;
+            margin-top: 800px;
+            background-color: goldenrod;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    
+        .details-section {
+            flex: 1;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+    
+        .details-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            animation: slideInLeft 1s ease-in-out;
+        }
+    
+        .details-section p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            animation: fadeInUp 2s ease-in-out;
+        }
+    
+        .image-gallery {
+            flex: 1;
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            height: 30rem;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: goldenrod;
+        }
+    
+        .photo-card {
+            flex: 0 0 auto;
+            position: relative;
+            margin-right: 10px;
+            width: 300px;
+            height: 400px;
+            background: #192841;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        .photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .photo-card img:hover {
+            transform: scale(1.1);
+        }
+    
+        .text-overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            border-radius: 0 0 10px 10px;
+        }
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+    
+    <div class="layout-wrapper" >
+        <div class="details-section">
+            <h3 style="text-align: center;">Welcome to Journey Hive</h3>
+            <p>At Journey Hive, we specialize in booking budget-friendly hotels in some of the most sought-after destinations around the world. Let us help you find the perfect place to stay on your next adventure.</p>
+        </div>
+        <div class="image-gallery">
+            <div class="photo-card">
+                <img src="syd" alt="Sydney">
+                <div class="text-overlay">Sydney</div>
+                
+            </div>
+            <div class="photo-card">
+                <img src="india ht" alt="Mumbai">
+                <div class="text-overlay">Mumbai</div>
+
+            </div>
+            <div class="photo-card">
+                <img src="dubai.jpg" alt="Dubai">
+                <div class="text-overlay">Dubai</div>
+        
+            </div>
+            <div class="photo-card">
+                <img src="monaco.jpg" alt="Monaco">
+                <div class="text-overlay">Monaco</div>
+         
+            </div>
+            <div class="photo-card">
+                <img src="japan.webp" alt="Japan">
+                <div class="text-overlay">Japan</div>
+     
+            </div>
+            <div class="photo-card">
+                <img src="New delhi.jpg" alt="New Delhi">
+                <div class="text-overlay">New Delhi</div>
+       
+            </div>
+        </div>
+    </div>
+    
+    
+<style>
+    .section{
+        background-color: chocolate;
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+</style>
+<!--<section id="place1" class="places" style="margin-bottom: 200px; position: relative; top: 38rem;">
+    <div class="places-text">
+        <h2 style="background-color: darkorange; color:#192841;">
+            FEATURED TOUR PACKAGES
+        </h2>
+    </div>
+
+    <div class="gallery-item" style="position: relative; width: 100%;background-color:#353535;">
+        <img class="gallery-image" src="ima" alt="India Tour Image"
+             style="width: 100%; height: 900px;object-fit:cover ; ">
+        
+        <div style="text-align: center; position: absolute; bottom: 0; width: 100%; padding: 1rem 0;">
+            <a href="auto.html" style="font-size: 25px; margin: 0; text-decoration: none; color: inherit;">
+                <span style="background-color: #ffc107; color: white; position: relative; z-index: 10; display: inline-block; padding: 20px;bottom: 450px;">
+                    India Tour Package
+                </span>
+            </a> 
+        </div>
+    </div>
+
+
+
+
+
+        </div>
+        <div class="cards" style="position: relative;bottom: 550px;height:90rem;position: relative;top:100px;background-color:#353535">
+            <div class="flip-card"  style="position:relative;top:210px" >
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="q2" alt="Canada Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Canada Tour Packages</h2>
+                            <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back" style="background-color: #ffc107;">
+                        <h2>Canada Tour</h2>
+                        <p>Explore the beautiful landscapes of Canada with our exclusive tour packages.</p>
+                        <a href="card.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;;">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card"  style="position:relative;top:210px">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="j1" alt="france Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ France Tour Packages</h2>
+                            <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"  style="background-color: #ffc107;">
+                        <h2>France Tour</h2>
+                        <p>Explore the beautiful landscapes of France with our exclusive tour packages.</p>
+                        <a href="index4.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;"> Explore More</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card"  style="position:relative;top:210px">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="m12" alt="Switzerland Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Monacco Tour Packages</h2>
+                            <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"  style="background-color: #ffc107;">
+                        <h2>Monacco Tour</h2>
+                        <p>Explore the beautiful landscapes of Monacco with our exclusive tour packages.</p>
+                        <a href="b.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card"   style="position:relative;top:210px">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="j00" alt="Japan Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Japan Tour Packages</h2>
+                            <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"  style="background-color: #ffc107;">
+                        <h2>Japan Tour</h2>
+                        <p>Explore the beautiful landscapes of Japan with our exclusive tour packages.</p>
+                        <a href="video.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" style="margin-top: 200px;">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="t1" alt="Japan Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Switzerland Tour Packages</h2>
+                            <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"  style="background-color: #ffc107;">
+                        <h2>Switzerland Tour</h2>
+                        <p>Explore the beautiful landscapes of Switzerland with our exclusive tour packages.</p>
+                        <a href="demo1.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" style="margin-top: 200px;">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="t2" alt="Japan Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Australia Tour Packages</h2>
+                            <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"  style="background-color: #ffc107;">
+                        <h2>Australia Tour</h2>
+                        <p>Explore the beautiful landscapes of Australia with our exclusive tour packages.</p>
+                        <a href="card.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">ExploreMore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" style="margin-top: 200px;">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="t3" alt="Japan Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Maldives Tour Packages</h2>
+                            <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"  style="background-color: #ffc107;">
+                        <h2>Maldives Tour</h2>
+                        <p>Explore the beautiful landscapes of Maldives with our exclusive tour packages.</p>
+                        <a href="card.html" style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card" style="margin-top: 200px;">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="t4" alt="Germany Tour" style="width:100%;height:100%;">
+                        <div class="text">
+                            <span class="rating">⭐⭐⭐⭐⭐</span>
+                            <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Germany Tour Packages</h2>
+                            <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back"  style="background-color: #ffc107;">
+                        <h2> Germany Tour</h2>
+                        <p>Explore the beautiful landscapes of Germany with our exclusive tour packages.</p>
+                        <a href="card.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+</section> -->
+<div style="background-color: #2c2c2c; ">
+
+    <!-- Section with modified India Tour image -->
+    <section id="place1" class="places" style="margin-bottom: 200px; position: relative;margin-top: 18rem;">
+        <div class="places-text">
+            <h2 style="background-color: darkorange; color:#192841;position: relative;bottom: 100px;">
+                FEATURED TOUR PACKAGES
+            </h2>
+        </div>
+
+        <div class="gallery-item" style="position: relative; width: 100%; background-color:#353535;">
+            <img class="gallery-image" src="ima" alt="India Tour Image"
+                 style="width: 100%; height: 600px; object-fit:cover; transition: transform 0.5s ease;">
+            
+            <div style="text-align: center; position: absolute; bottom: 0; width: 100%; padding: 1rem 0;">
+                <a href="auto.html" style="font-size: 25px; margin: 0; text-decoration: none; color: inherit;">
+                    <span style="background-color: #ffc107; color: black; position: relative; z-index: 10; display: block; padding: 20px; bottom: 200px;top:1rem; width: 100%; box-sizing: border-box;">
+                        India Tour Package
+                    </span>
+                </a> 
+            </div>
+        </div>
+
+        <!-- Add a hover effect for the India Tour image -->
+        <script>
+            document.querySelector('.gallery-image').addEventListener('mouseover', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            document.querySelector('.gallery-image').addEventListener('mouseout', function() {
+                this.style.transform = 'scale(1)';
+            });
+        </script>
+ <!-- Cards section remains unchanged --
+ <div class="cards" style="position: relative; bottom: 550px; height:90rem; position: relative; top:100px; background-color:#353535;padding-bottom: 19rem;">
+    <div class="flip-card" style="position:relative;top:210px">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="q2" alt="Canada Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Canada Tour Packages</h2>
+                    <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back" style="background-color: #ffc107;">
+                <h2>Canada Tour</h2>
+                <p>Explore the beautiful landscapes of Canada with our exclusive tour packages.</p>
+                <a href="card.html" style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card"  style="position:relative;top:210px">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="j1" alt="france Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ France Tour Packages</h2>
+                    <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back"  style="background-color: #ffc107;">
+                <h2>France Tour</h2>
+                <p>Explore the beautiful landscapes of France with our exclusive tour packages.</p>
+                <a href="index4.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;"> Explore More</a>
+
+            </div>
+        </div>
+    </div>
+    <div class="flip-card"  style="position:relative;top:210px">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="m12" alt="Switzerland Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Monacco Tour Packages</h2>
+                    <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back"  style="background-color: #ffc107;">
+                <h2>Monacco Tour</h2>
+                <p>Explore the beautiful landscapes of Monacco with our exclusive tour packages.</p>
+                <a href="b.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card"   style="position:relative;top:210px">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="j00" alt="Japan Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Japan Tour Packages</h2>
+                    <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back"  style="background-color: #ffc107;">
+                <h2>Japan Tour</h2>
+                <p>Explore the beautiful landscapes of Japan with our exclusive tour packages.</p>
+                <a href="video.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="margin-top: 400px;">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="t1" alt="Japan Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Switzerland Tour Packages</h2>
+                    <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back"  style="background-color: #ffc107;">
+                <h2>Switzerland Tour</h2>
+                <p>Explore the beautiful landscapes of Switzerland with our exclusive tour packages.</p>
+                <a href="demo1.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="margin-top: 400px;">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="t2" alt="Japan Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Australia Tour Packages</h2>
+                    <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back"  style="background-color: #ffc107;">
+                <h2>Australia Tour</h2>
+                <p>Explore the beautiful landscapes of Australia with our exclusive tour packages.</p>
+                <a href="card.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">ExploreMore</a>
+            </div>
+        </div>
+    </div>
+    <div class="flip-card" style="margin-top: 400px;">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="t3" alt="Japan Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Maldives Tour Packages</h2>
+                    <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back"  style="background-color: #ffc107;">
+                <h2>Maldives Tour</h2>
+                <p>Explore the beautiful landscapes of Maldives with our exclusive tour packages.</p>
+                <a href="card.html" style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+            </div>
+        </div>
+   
+    <div class="flip-card" style="margin-top: 500px;;">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="t4" alt="Germany Tour" style="width:100%;height:100%;">
+                <div class="text">
+                    <span class="rating">⭐⭐⭐⭐⭐</span>
+                    <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Germany Tour Packages</h2>
+                    <p class="cost"style="background-color: darkorange;">$1870 / Per Person</p>
+                </div>
+            </div>
+            <div class="flip-card-back"  style="background-color: #ffc107;">
+                <h2> Germany Tour</h2>
+                <p>Explore the beautiful landscapes of Germany with our exclusive tour packages.</p>
+                <a href="card.html"  style="background-color: #192841;color: white;text-decoration: none;height: 35px;width: 12rem;">Explore More</a>
+            </div>
+        </div>
+    </div>
+    </div>-->
+    <div class="cards" style="position: relative; bottom: 550px; top:100px; background-color:#353535; padding-bottom: 19rem; display: flex; flex-wrap: wrap; justify-content: center;">
+        <!-- Row 1 -->
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="q2" alt="Canada Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Canada Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Canada Tour</h2>
+                    <p>Explore the beautiful landscapes of Canada with our exclusive tour packages.</p>
+                    <a href="card.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;position: relative;left:170px;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="j1" alt="France Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ France Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>France Tour</h2>
+                    <p>Explore the beautiful landscapes of France with our exclusive tour packages.</p>
+                    <a href="index4.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;position: relative;top: 68rem;right:11rem;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="m12" alt="Monacco Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Monacco Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Monacco Tour</h2>
+                    <p>Explore the beautiful landscapes of Monacco with our exclusive tour packages.</p>
+                    <a href="b.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 2 -->
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="j00" alt="Japan Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Japan Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Japan Tour</h2>
+                    <p>Explore the beautiful landscapes of Japan with our exclusive tour packages.</p>
+                    <a href="video.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;position:relative;top:5rem;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="t1" alt="Switzerland Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Switzerland Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Switzerland Tour</h2>
+                    <p>Explore the beautiful landscapes of Switzerland with our exclusive tour packages.</p>
+                    <a href="demo1.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;position: relative;bottom:10rem;left: 10.5rem;top: 5rem;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="t2" alt="Australia Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Australia Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Australia Tour</h2>
+                    <p>Explore the beautiful landscapes of Australia with our exclusive tour packages.</p>
+                    <a href="card.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Row 3 -->
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;position: relative;left: 22rem;top: 5rem;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="t3" alt="Maldives Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Maldives Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Maldives Tour</h2>
+                    <p>Explore the beautiful landscapes of Maldives with our exclusive tour packages.</p>
+                    <a href="card.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;position: relative;top:40rem;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="t4" alt="Germany Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Germany Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Germany Tour</h2>
+                    <p>Explore the beautiful landscapes of Germany with our exclusive tour packages.</p>
+                    <a href="card.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flip-card" style="margin: 15px; width: 300px; height: 400px;position: relative;right: 33rem;top:12rem;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="i7" alt="Spain Tour" style="width:100%; height:100%;">
+                    <div class="text">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <h2 style="font-size: 20px;background-color: #ffd700;color:black">✈ Spain Tour Packages</h2>
+                        <p class="cost" style="background-color: darkorange;">$1870 / Per Person</p>
+                    </div>
+                </div>
+                <div class="flip-card-back" style="background-color: #ffc107;">
+                    <h2>Spain Tour</h2>
+                    <p>Explore the beautiful landscapes of Spain with our exclusive tour packages.</p>
+                    <a href="card.html" style="background-color: #192841; color: white; text-decoration: none; display: inline-block; padding: 8px 16px; margin-top: 10px;">Explore More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    </section>
+</div>   
+</div> 
+
+    <!--<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000"
+        style="position: relative; bottom: 400px;background-color: darkgoldenrod;position: relative;top:30rem;">
+        <h2 style="text-align: center;"><i>"Top Picks for Budget-Friendly Hotels: Comfort Without Compromise"</i></h2>
+        <p>"At Journey Hive, we understand that every traveler has unique needs and budgets. That's why we offer
+            personalized hotel booking services that align with your plans, ensuring you enjoy budget-friendly
+            accommodations without compromising on comfort or quality. Let us find the perfect stay for you, so you can
+            focus on making the most of your journey."</p>
+        <div class="carousel-indicators" style="margin:10px;">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 --
+            <div class="carousel-item active">
+                <img src="h1" class="d-block w-100" alt="i3" style="height: 40rem;">
+                <div class="carousel-caption d-none d-md-block animated fadeInUp">
+                    <h5 style="background-color: yellow;">Experience the Power of i3</h5>
+                    <p>Cutting-edge technology for a seamless experience.</p>
+                </div>
+            </div>
+            <!-- Slide 2 --
+            <div class="carousel-item">
+                <img src="h2" class="d-block w-100" alt="i2" style="height: 40rem;">
+                <div class="carousel-caption d-none d-md-block animated fadeInDown">
+                    <h5>Explore the Elegance of i2</h5>
+                    <p>Design and performance perfectly balanced.</p>
+                </div>
+            </div>
+            <!-- Slide 3 --
+            <div class="carousel-item">
+                <img src="i4" class="d-block w-100" alt="i4" style="height: 40rem;">
+                <div class="carousel-caption d-none d-md-block animated fadeInRight">
+                    <h5>Unleash the Power of i4</h5>
+                    <p>Unmatched performance and precision.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <style>
+        /* Faster transition for the carousel */
+        #carouselExampleCaptions .carousel-item {
+            transition: transform 0.99s ease-in-out, opacity 0.5s ease-in-out;
+        }
+    </style> -->
+   
+    <style>
+        
+        .gallery-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
+        }
+        .gallery-item {
+            display: inline-block;
+            position: relative;
+            width: 300px; /* Adjust width of each image */
+            margin-right: 10px; /* Space between images */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Optional: Adds rounded corners */
+        }
+        .text-overlay {
+            position: absolute;
+            bottom: 10px; /* Adjust positioning as needed */
+            left: 10px; /* Adjust positioning as needed */
+            color: white; /* Text color */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 18px; /* Adjust text size as needed */
+            width: calc(100% - 20px); /* Ensure text fits within image */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+        .gallery-title {
+            margin: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+    </style>
+       
+
+       
+
+
+
+
+
+
+
+
+
+
+    <!--===========About Us===============-->
+    <!-- Ensure all review cards are present and correctly formatted -->
+    <div class="review-section" style="position: relative; top: 9rem; margin-bottom: 300px;">
+        <h1 class="reviews-header">What Our Travellers Say About Journey Hive</h1>
+    
+        <div class="reviews-container">
+            <!-- Each review card -->
+            <div class="review-card animate__animated animate__fadeInUp">
+                <img src="u2" alt="Marnus Stephen" class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"Journey Hive made my travel planning effortless! The trip recommendations were perfect, and the hotel picks were spot-on. I’ll definitely use Journey Hive again!"</b></p>
+                        <h4>- Marnus Stephen</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card animate__animated animate__fadeInUp">
+                <img src="u1" alt="Casley" class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"Journey Hive surpassed my expectations. Smooth flight booking and valuable travel advice. I’ll be using Journey Hive for future trips!</b></p>
+                        <h4>- Casley</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card animate__animated animate__fadeInUp">
+                <img src="r2" alt="Riley K." class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"Planning with Journey Hive was a breeze. The site is user-friendly, and the guides were detailed and helpful. Felt like I had a personal travel assistant!"</b></p>
+                        <h4>- Riley K.</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card animate__animated animate__fadeInUp"style="position: relative;">
+                <img src="r4" alt="Marnus Stephen" class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"Amazing experience with Journey Hive! Everything was smooth and the guides were fantastic."</b>
+                        </p>
+                        <h4>- Prince</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card animate__animated animate__fadeInUp" style="position: relative;">
+                <img src="r3" alt="Marnus Stephen" class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"Great service from Journey Hive! The budget-friendly hotels and trip planning tool kept me
+                            within my budget. Very satisfied with the results!".</b></p>
+                        <h4>- Taylor </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card animate__animated animate__fadeInUp"style="position: relative;">
+                <img src="r4" alt="Marnus Stephen" class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"Amazing experience with Journey Hive! Everything was smooth and the guides were fantastic."</b>
+                        </p>
+                        <h4>- Prince</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card animate__animated animate__fadeInUp" style="position: relative;;">
+                <img src="r1." alt="Marnus Stephen" class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"My Journey Hive experience was excellent. The site was easy to navigate, and the guides were
+                            well-organized and insightful. Felt confident planning my trip!"</p>
+                        <h4>- Morgan</b></h4>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Add more review cards here -->
+            <div class="review-card animate__animated animate__fadeInUp"style="position: relative;">
+                <img src="r4" alt="Marnus Stephen" class="review-avatar" />
+                <div class="review-content">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="review-details">
+                        <span class="rating">⭐⭐⭐⭐⭐</span>
+                        <p><b>"Amazing experience with Journey Hive! Everything was smooth and the guides were fantastic."</b>
+                        </p>
+                        <h4>- Prince</h4>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div> 
+    
+    <!-- Include Animate.css for the animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- Optionally, include the Remix Icon library if you are using Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <style>
+        .review-section {
+            position: relative;
+            top: 38rem;
+            padding: 6rem;
+            margin-bottom: 300px;
+        }
+    
+        .reviews-header {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            margin-top: 50px;
+            width: 100%; /* Makes the header full width */
+        }
+    
+        .reviews-container {
+            display: flex;
+            flex-wrap: wrap;
+           
+            gap: 30px; /* Adds space between the review cards */
+        }
+    
+        .review-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            margin: 20px; /* Adds space around each card */
+        }
+    
+        .review-card:hover {
+            transform: translateY(-10px);
+        }
+    
+        .review-avatar {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+    
+        .review-content {
+            text-align: left;
+        }
+    
+        .rating {
+            font-size: 1.2rem;
+            color: #ffd700;
+        }
+    
+        .review-details p {
+            font-style: italic;
+            color: #333;
+        }
+    
+        .review-details h4 {
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+    
+
+
+ 
+    <style>
+    .footer {
+    background: #343a40;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 30px 0; /* Reduced padding for less height */
+    box-sizing: border-box; /* Include padding in the width calculation */
+ 
+    
+}
+
+.footer .container .row>div {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.footer .site-brand span {
+    color: #ffc107;
+    font-size: 30px;
+}
+
+.footer h2 {
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer h2::after {
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #ffc107;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.footer p,
+.footer a {
+    color: #adb5bd;
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer a:hover {
+    color: #ffc107;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.footer .list-unstyled li:hover {
+    transform: translateX(5px);
+}
+
+.footer .subscribe-form .form-control {
+    border-radius: 30px 0 0 30px;
+    font-size: 14px;
+}
+
+.footer .subscribe-form .btn {
+    border-radius: 0 30px 30px 0;
+    font-size: 14px;
+}
+
+.footer .social-icons a {
+    color: #adb5bd;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #ffc107;
+}
+
+.footer .contact-info p {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+    background: #23272b;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 30px;
+    }
+}
+</style>
+<footer class="footer" style="height: 38rem;">
+    <div class="container" style="position: relative;bottom: 12rem;">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h2 class="text-uppercase mb-4">
+                    <a href="#" class="site-brand" style="font-size: 2rem;">
+                        Journey<span style="color: darkgoldenrod; font-size: 2rem;">Hive</span>
+                    </a>
+                </h2>
+                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates maiores nam vitae iusto.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h2 class="text-uppercase mb-4">Popular Places</h2>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Thailand</a></li>
+                    <li><a href="#" class="text-white">Australia</a></li>
+                    <li><a href="#" class="text-white">Maldives</a></li>
+                    <li><a href="#" class="text-white">Switzerland</a></li>
+                    <li><a href="#" class="text-white">Germany</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h2 class="text-uppercase mb-4">Subscribe for Newsletter!</h2>
+                <form class="subscribe-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter Email" aria-label="Email" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-warning" type="button" id="button-addon2" style="margin-right: 15px;height:35px ;">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="social-icons">
+                    <h2 class="text-uppercase mb-4">Follow Us</h2>
+                    <ul class="list-unstyled d-flex justify-content-center">
+                        <li><a href="https://www.facebook.com" target="_blank" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank" class="text-white mr-3"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.whatsapp.com" target="_blank" class="text-white mr-3"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.youtube.com" target="_blank" class="text-white mr-3"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://www.twitter.com" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="contact-info">
+                    <h2 class="text-uppercase mb-4">Contact</h2>
+                    <p  style="font-size: 1rem;">Email: <br> info@journeyhive.com</p>
+                    <p style="font-size: 1rem;">Phone: <br> +1 (123) 456-7890</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom" style="border: 3px solid darkgoldenrod;  background: #23272b;border-radius: 2px;position: relative;bottom:15rem;">
+        <p>&copy; 2024 Journey Hive. All rights reserved.</p>
+    </div>
+    
+</footer>
+
+
+    <!-- Bootstrap and Font Awesome JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
